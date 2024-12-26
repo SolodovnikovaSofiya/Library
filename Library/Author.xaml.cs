@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Library
+{
+    /// <summary>
+    /// Логика взаимодействия для Author.xaml
+    /// </summary>
+    public partial class Author : Page
+    {
+        public Author()
+        {
+            InitializeComponent();
+            DataGridUser.ItemsSource = Entities.GetContext().Авторы.ToList();
+        }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void ButtonDel_Click(object sender, RoutedEventArgs e)
+        {
+            var usersForRemoving = DataGridUser.SelectedItems.Cast<Авторы>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить записи в количестве {usersForRemoving.Count} элементов?", "Внимание",
+               MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    Entities.GetContext().Авторы.RemoveRange(usersForRemoving);
+                    Entities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные успешно удалены!");
+                    DataGridUser.ItemsSource = Entities.GetContext().Авторы.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AuthorAdd());
+        }
+        private void ButtonEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+}

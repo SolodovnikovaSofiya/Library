@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bbe5e7e36fb4e40a91e0a819c1a72fe" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="БиблиотекаModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Авторы" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Возврат" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Выдача" Width="1.5" PointX="10.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Жанры" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Издательства" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Книги" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Оценка_книг" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Сотрудники" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Тиражи" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Читатели" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="БиблиотекаModel.Экземпляры" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Книги__Автор_id__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Возврат__Сотрудн__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Возврат__Читател__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Возврат__Экземпл__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Выдача__Сотрудни__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Выдача__Читатель__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Выдача__Экземпля__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Книги__Жанр_id__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Книги__Издательс__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Книги__Тираж_id__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Оценка_кн__Книга__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Экземпляр__Книга__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.FK__Оценка_кн__Читат__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="БиблиотекаModel.Авторы_Книги" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Library.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MaxHeight="450" MinWidth="800" MaxWidth="800">
+    <Grid>
+        <DataGrid Grid.Row="0" x:Name="DataGridUser"
+AutoGenerateColumns="False" IsReadOnly="True" Grid.RowSpan="8" Grid.ColumnSpan="2">
+        </DataGrid>
+        <Frame x:Name="MainFrame" Content="" Source="RolePage.xaml" Margin="0,0,0,10" Grid.RowSpan="8" Grid.ColumnSpan="2"/>
+       
+
+    </Grid>
+</Window>

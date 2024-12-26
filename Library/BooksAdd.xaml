@@ -1,0 +1,69 @@
+﻿<Page x:Class="Library.BooksAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BooksAdd">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/фон.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Название" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16" FontFamily="Verdana"/>
+        <TextBlock Text="Автор" Grid.Row="1" Grid.Column="0" Margin="10,0,0,0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
+        <TextBlock Text="Жанр" Grid.Row="2" Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana"/>
+        <TextBlock Text="Издательство" Grid.Row="3" Grid.Column="0" Margin="88,29,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" FontFamily="Verdana"/>
+
+        <TextBox x:Name="Names" ToolTip="Введите название книги" Grid.Row="0" Grid.Column="1" Margin="24,0,24,0" FontSize="18" FontFamily="Verdana" Height="40" VerticalAlignment="Center"  />
+        <Button Name="ButtonSave" ToolTip="Нажмите, чтобы сохранить изменения" Content="Cохранить" Grid.Row="5"  Grid.ColumnSpan="2" Width="150" Margin="10,0,10,0" Height="40" HorizontalAlignment="Right" FontSize="16"  FontFamily="Verdana" Click="ButtonSave_Click" VerticalAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFF61B53"/>
+                    <GradientStop Color="#FFE0897F" Offset="0.515"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFEFC5C0" Offset="1"/>
+                    <GradientStop Color="#FFE4A5AF"/>
+                    <GradientStop Color="#FF1F1F1F"/>
+                    <GradientStop Color="#FFE19293"/>
+                    <GradientStop Color="#FFEDBBB5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="ButtonCancel" ToolTip="Нажмите, чтобы вернуться на главную страницу" Content="Отмена" Grid.Row="5"  Grid.ColumnSpan="2" Width="150" Margin="10,0,10,0" Height="40" HorizontalAlignment="Left" FontSize="16"  FontFamily="Verdana" Click="ButtonCancel_Click" VerticalAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1CAC5" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFDE8076" Offset="0.498"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFF3D0CC"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <ComboBox HorizontalAlignment="Center" x:Name="comboBoxAuthors" SelectedItem="{Binding Авторы.id}" SelectedValuePath="id" DisplayMemberPath="Фамилия" Grid.Row="1" VerticalAlignment="Center" Width="552" Height="40" Grid.Column="1"/>
+        <ComboBox HorizontalAlignment="Center" x:Name="comboBoxGenre" SelectedItem="{Binding Жанры}" SelectedValuePath="id" DisplayMemberPath="Название" Grid.Row="2" VerticalAlignment="Center" Width="552" Height="40" Grid.Column="1"/>
+        <ComboBox HorizontalAlignment="Center" x:Name="comboBoxIzd" SelectedItem="{Binding Издательства}" SelectedValuePath="id" DisplayMemberPath="Название" Grid.Row="3" VerticalAlignment="Top" Width="552" Height="40" Grid.Column="1" Margin="0,17,0,0"/>
+        <TextBlock Text="Тираж" Grid.Row="4" Grid.Column="0" Margin="144,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana"/>
+        <ComboBox HorizontalAlignment="Center" x:Name="comboBoxTiragh" SelectedItem="{Binding Количество}" SelectedValuePath="id" DisplayMemberPath="Количество" Grid.Row="4" VerticalAlignment="Center" Width="552" Height="40" Grid.Column="1"/>
+
+
+    </Grid>
+</Page>

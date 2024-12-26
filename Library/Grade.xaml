@@ -1,0 +1,80 @@
+﻿<Page x:Class="Library.Grade"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Grade">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/фон.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Name="ButtonAdd" ToolTip="Нажмите, чтобы сохранить изменения" Content="Добавить" Grid.Row="4" Width="150" Margin="477,0,0,0" HorizontalAlignment="Left" FontSize="16"  FontFamily="Verdana" Grid.Column="1" Click="ButtonAdd_Click" Height="40" VerticalAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFF61B53"/>
+                    <GradientStop Color="#FFE0897F" Offset="0.515"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFEFC5C0" Offset="1"/>
+                    <GradientStop Color="#FFE4A5AF"/>
+                    <GradientStop Color="#FF1F1F1F"/>
+                    <GradientStop Color="#FFE19293"/>
+                    <GradientStop Color="#FFEDBBB5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="ButtonCancel" ToolTip="Нажмите, чтобы вернуться на главную страницу" Content="Отмена" Grid.Row="4" Width="150" HorizontalAlignment="Center" FontSize="16"  FontFamily="Verdana" Click="ButtonCancel_Click" Height="40" VerticalAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1CAC5" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFDE8076" Offset="0.498"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFF3D0CC"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ButtonDelete" ToolTip="Нажмите, чтобы удалить читателя" Content="Удалить" Grid.Row="4" Width="150" Margin="306,0,0,0" HorizontalAlignment="Left" FontSize="16"  FontFamily="Verdana" Grid.Column="1" Click="ButtonDelete_Click" VerticalAlignment="Center" Height="40">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFF61B53"/>
+                    <GradientStop Color="#FFE0897F" Offset="0.515"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFEFC5C0" Offset="1"/>
+                    <GradientStop Color="#FFE4A5AF"/>
+                    <GradientStop Color="#FF1F1F1F"/>
+                    <GradientStop Color="#FFE19293"/>
+                    <GradientStop Color="#FFEDBBB5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="False" Grid.ColumnSpan="2" Margin="50,73,50,45" Grid.RowSpan="4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Книга" Binding ="{Binding Книги.Название}" Width="*" FontFamily="Verdana"/>
+                <DataGridTextColumn Header="Читатель" Binding="{Binding Читатели.Фамилия}" Width="*" FontFamily="Verdana"/>
+                <DataGridTextColumn Header="Оценка" Binding="{Binding Оценка}" Width="*" FontFamily="Verdana"/>
+              
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

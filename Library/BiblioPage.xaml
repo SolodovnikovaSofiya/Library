@@ -1,0 +1,92 @@
+﻿<Page x:Class="Library.BiblioPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BiblioPage">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/фон.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Name="ButtonReaders" Content="Список читателей" Height="40" Width="216" Margin="240,0,0,0" HorizontalAlignment="Left" FontSize="16"  FontFamily="Verdana" Click="ButtonReaders_Click" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1CAC5" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFDE8076" Offset="0.498"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFF3D0CC"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Список книг" Width="216" Height="40" Margin="240,0,0,0" HorizontalAlignment="Left" FontSize="16"  FontFamily="Verdana" Click="ButtonBooks_Click" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1CAC5" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFDE8076" Offset="0.498"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFF3D0CC"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Выдача книг" HorizontalAlignment="Left" Height="40" FontSize="16"  FontFamily="Verdana" VerticalAlignment="Center" Width="216" Margin="240,0,0,0" Click="ButtonDistribution_Click" Grid.Column="1" Grid.Row="4">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1CAC5" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFDE8076" Offset="0.498"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFF3D0CC"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Возврат книг" FontSize="16" Height="40" FontFamily="Verdana" HorizontalAlignment="Left" VerticalAlignment="Center" Width="216" Margin="240,0,0,0" Click="ButtonReturn_Click" Grid.Column="1" Grid.Row="3">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1CAC5" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFDE8076" Offset="0.498"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFF3D0CC"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="ButtonCancel" ToolTip="Нажмите, чтобы вернуться на главную страницу" Content="Назад" Width="150" Margin="125,0,0,0" HorizontalAlignment="Left" FontSize="16"  FontFamily="Verdana" Click="ButtonCancel_Click" Grid.Row="5" Grid.Column="1" Height="40" VerticalAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1CAC5" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFDE8076" Offset="0.498"/>
+                    <GradientStop Color="#FFEAC6E0"/>
+                    <GradientStop Color="#FFF3D0CC"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image Source="/images/book.png" Margin="100,34,450,59" Grid.ColumnSpan="2" Grid.RowSpan="5" />
+
+
+    </Grid>
+</Page>
